@@ -1,0 +1,106 @@
+ISE 315 Analysis of Algorithms
+Fall 2020 - Homework 2
+Handed out: November 24, 2020
+Due: December 8, 2020, 23.59
+Submission type: An archive file including all source code files and report (pdf).
+Heap Sort
+In this homework, you are expected to find closest K locations among N locations to a given
+location considering their coordinates on earth.
+Part A. Implementation (50 points)
+A city’s location is represented with its longitude and latitude. Longitudes are imaginary semi-
+circles that intersect equator line with 90° starting from one pole to the other (North Pole and
+South Pole). Greenwich (in London) is accepted as a reference point (0°) for longitudes. There
+are 180 longitudes on the eastern side of this reference point (0° to +180°) and 180 longitudes
+on the western side (0° to -180°).
+Latitudes are also imaginary circles which stand parallel to the equator starting from equator
+to both North and South Pole. It is known that there are 180 latitudes on earth and equator is
+accepted as a reference (0°) for them. There are 90 latitudes within the northern part of the
+equator (0° to 90°). Southern part of the equator includes the rest of the latitudes (0° to -90°).
+In the table below, some cities are shown and you may get the idea of how a city’s location is
+represented.
+City / Coordinate
+Tokyo
+Sydney
+Moscow
+Istanbul
+London
+Cape Town
+New York
+Buenos Aires
+Honolulu
+Mexico City
+Stockholm
+Latitude
+35.689487
+-33.867487
+55.755826
+41.005270
+51.511214
+-33.924869
+40.714353
+-34.603723
+21.306944
+19.432608
+59.328930
+Longitude
+139.691706
+151.206990
+37.617300
+28.976960
+-0.119824
+18.424055
+-74.005973
+-58.381593
+-157.858333
+-99.133208
+18.064910
+You are required to implement heap sort algorithm in order to find closest K locations to a
+given coordinate among N locations.
+A data set (location.txt) is provided that includes city names, latitude and longitude
+information on each line respectively. In order to calculate the distance between two
+locations,
+you
+may
+use
+the
+formulas
+in
+the
+following
+link
+http://andrew.hedges.name/experiments/haversine/.ISE 315 Analysis of Algorithms
+Fall 2020 - Homework 2
+You are also given a code fraction that reads the input file. You may also use this code in
+order not to deal with input file operations.
+Your program should be run from the command line with the following format for C++:
+./studentID N K latitude longitude (i.e ./150150113 10 2 35 130)
+For Python:
+studentID.py –N 10 –K 2 –latitude 35 –longitude 130
+N : Total number of locations to be sorted (10, 100, 1000, 1000000)
+K : Number of closest locations to be found (1, 2, 10, N/2)
+latitude : Latitude information of the point that closest K location will be found
+longitude : Longitude information of the point that closest K location will be found
+After execution of your program, an output file should be created that lists K cities with their
+names, latitude and longitude information like the input file’s format.
+Part B. Report (50 points)
+a. Give and prove the asymptotic upper bound on the running time for heap sort.
+b. Run the algorithm for each different value of N as {10, 100, 1000, 1000000} and K as {1, 2,
+10, N/2} calculate the average time of execution for each value of N.
+Note: You can use the clock() function under ctime library for calculating time of execution for
+the search functions. Refer to http://www.cplusplus.com/reference/clibrary/ctime/clock for
+more details.
+c. After calculating execution times you will prepare 4 plots in Excel in order to visualize the
+runtime complexity of heap sort for different values of N and K. You may prepare one plot for
+each K value where each of them includes 4 lines for each N value. Then you are expected to
+interpret the results with respect to the asymptotic upper bound you have given in a.
+
+
+Notes:
+All your code must be written in Python or C++ and able to compile and run on Linux. (g++
+command for C++ codes.)
+Submissions will be done through the Ninova server. You must submit all your program and
+header files. You must also submit a report pdf.
+This is an individual homework. You should write your own code. Academic
+dishonesty including but not limited to cheating, plagiarism, collaboration is
+unacceptable and subject to disciplinary actions. Any student found guilty will get
+minus points.
